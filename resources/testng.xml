@@ -16,4 +16,10 @@
       <class name="com.coffeecart.tests.CartTests"/>
     </classes>
   </test>
+  <test name="Demo Failure Tests">
+    <classes>
+      <class name="com.coffeecart.tests.FailureTests"/>
+    </classes>
+  </test>
+
 </suite>
