@@ -1,0 +1,90 @@
+# ☕ Coffee Cart Automation Framework
+
+This project is a Selenium + TestNG based automation framework designed to test the Coffee Cart web application. It uses the Page Object Model (POM), data-driven testing, and includes reusable utilities, listeners, and structured reporting.
+
+---
+
+## 📌 Features
+
+- TestNG with suite-level control  
+- Page Object Model (POM)  
+- Data-driven tests via Excel  
+- Centralized WebDriver management  
+- ExtentReports / HTML test outputs  
+- TestNG Listeners for custom logging  
+- Maven for build and dependency management  
+
+---
+
+## 📐 Architecture
+
+![Architecture Diagram](architecture-diagram.png)
+
+---
+
+## 🗂️ Project Structure
+
+```
+Coffee Cart Automation Project/
+├── src/
+│   ├── main/java/com/coffeecart/
+│   │   ├── pages/         # Page Objects (MenuPage, CartPage, etc.)
+│   │   ├── managers/      # WebDriver manager
+│   │   └── utils/         # ExcelReader, ConfigReader, etc.
+│   └── test/java/com/coffeecart/
+│       ├── tests/         # Test classes (MenuTests, CartTests)
+│       ├── data/          # TestDataProvider
+│       ├── suites/        # TestNG runner
+│       └── listeners/     # TestListener
+├── resources/             # Excel/config files
+├── output/                # Test results/reports/screenshots
+├── pom.xml                # Maven config
+└── testng.xml             # TestNG suite
+```
+
+---
+
+## 🧪 How to Run
+
+1. Clone the repository  
+2. Import as **Maven Project** in IntelliJ or Eclipse  
+3. Install dependencies:  
+   ```bash
+   mvn clean install
+   ```  
+4. Execute tests via:  
+   ```bash
+   mvn test
+   ```  
+   or directly from `testng.xml`
+
+---
+
+## ⚙️ Configuration
+
+- Config file: `resources/config.properties`  
+- Test data: `resources/testdata.xlsx`  
+- Browser: Configurable via `ConfigReader.java`
+
+---
+
+## 📋 Reporting
+
+Test results are generated under `/output` directory:
+- HTML reports  
+- Screenshots on failure  
+- Logs via listener hooks  
+
+---
+
+## 🙌 Contributors
+
+- Created by: **Akash Kuna**  
+- Design & Implementation: Selenium + TestNG + Maven
+
+---
+
+## 📄 License
+
+This project is for educational/testing purposes only. No license enforced.
+
